@@ -1,108 +1,144 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-
-background:#0f172a;
-color:white;
-transition:.4s;
-
+    background:#FFF8F0;
+    color:#2B2B2B;
 }
 
-.light{
-
-background:white;
-color:black;
-
-}
+/* Navigation */
 
 nav{
-
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-position:sticky;
-top:0;
-background:#111827;
-z-index:100;
-
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#7A1C1C;
+    color:white;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
 nav ul{
-
-display:flex;
-gap:30px;
-list-style:none;
-
+    display:flex;
+    gap:35px;
+    list-style:none;
 }
 
 nav a{
-
-color:white;
-text-decoration:none;
-
+    color:#FFF8F0;
+    text-decoration:none;
+    transition:.3s;
 }
 
+nav a:hover{
+    color:#FFD9D9;
+}
+
+/* Hero */
+
 header{
-
-text-align:center;
-padding:100px;
-
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(135deg,#B22222,#7A1C1C);
+    color:white;
 }
 
 .avatar{
-
-font-size:90px;
-animation:float 2s infinite alternate;
-
+    font-size:90px;
+    animation:float 3s ease-in-out infinite;
 }
 
 @keyframes float{
 
-to{
-transform:translateY(-15px);
-}
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
 
 }
+
+header h1{
+    font-size:60px;
+    margin-top:20px;
+}
+
+#typing{
+    margin-top:20px;
+    color:#FFF0F0;
+}
+
+/* Button */
 
 button{
 
-padding:12px 25px;
+padding:15px 35px;
+margin-top:35px;
 border:none;
-border-radius:30px;
-background:#38bdf8;
-color:white;
+border-radius:50px;
 cursor:pointer;
-margin-top:20px;
+font-size:17px;
+background:#FFF8F0;
+color:#B22222;
+font-weight:bold;
+transition:.3s;
 
 }
+
+button:hover{
+
+background:#D64545;
+color:white;
+transform:translateY(-4px);
+
+}
+
+/* Cards */
 
 .card{
 
-width:80%;
-margin:40px auto;
-padding:30px;
-background:#1e293b;
-border-radius:20px;
+width:82%;
+margin:50px auto;
+padding:35px;
+background:#F6EFE7;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+transition:.4s;
 
 }
 
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h2{
+
+color:#B22222;
+margin-bottom:20px;
+
+}
+
+/* Skills */
+
 .skill{
 
-margin:20px 0;
+margin:25px 0;
 
 }
 
 .bar{
 
 height:15px;
-background:#555;
-border-radius:20px;
+background:#E5D6CB;
+border-radius:30px;
 overflow:hidden;
 
 }
@@ -110,76 +146,157 @@ overflow:hidden;
 .fill{
 
 height:100%;
-width:0%;
-background:#38bdf8;
-transition:2s;
+background:linear-gradient(90deg,#B22222,#D64545);
+border-radius:30px;
+animation:grow 2s forwards;
 
 }
 
 .html{width:95%;}
-.css{width:90%;}
-.js{width:85%;}
-.py{width:92%;}
+.css{width:92%;}
+.js{width:88%;}
+.py{width:90%;}
+
+@keyframes grow{
+
+from{width:0;}
+
+}
+
+/* Stats */
 
 .stats{
 
 display:flex;
 justify-content:space-evenly;
+margin:70px;
 text-align:center;
-margin:60px;
 
 }
+
+.stats h1{
+
+font-size:50px;
+color:#B22222;
+
+}
+
+/* Projects */
 
 .cards{
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:30px;
 
 }
 
 .project{
 
-background:#334155;
-padding:20px;
-border-radius:15px;
-transition:.3s;
+padding:30px;
+border-radius:20px;
+background:white;
+transition:.4s;
+border:2px solid transparent;
 
 }
 
 .project:hover{
 
+border-color:#B22222;
 transform:translateY(-10px);
 
 }
 
-input,textarea{
+/* Contact */
+
+input,
+textarea{
 
 width:100%;
 padding:15px;
-margin:10px 0;
-border-radius:10px;
-border:none;
+margin:15px 0;
+border:2px solid #D9C8BB;
+border-radius:15px;
+background:white;
+outline:none;
 
 }
+
+input:focus,
+textarea:focus{
+
+border-color:#B22222;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#7A1C1C;
+padding:25px;
+text-align:center;
+color:#FFF8F0;
+margin-top:70px;
+
+}
+
+/* Scroll Button */
 
 #topBtn{
 
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
+background:#B22222;
+color:white;
 display:none;
 
 }
+
+/* Background Pattern */
 
 #particles{
 
 position:fixed;
 width:100%;
 height:100%;
-background-image:radial-gradient(#38bdf8 1px,transparent 1px);
+background-image:radial-gradient(#D64545 1px,transparent 1px);
 background-size:30px 30px;
-opacity:.15;
+opacity:.08;
 z-index:-1;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+gap:15px;
+
+}
+
+header h1{
+
+font-size:40px;
+
+}
+
+.card{
+
+width:92%;
+
+}
+
+.stats{
+
+flex-direction:column;
+gap:30px;
+
+}
 
 }
