@@ -1,114 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Kolla | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Ayush Kolla | Interactive Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+
+<div id="particles"></div>
+
+<nav>
+
+<h2>👨🏻‍💻 Ayush</h2>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<button id="themeBtn">🌙</button>
+
+</nav>
 
 <header>
 
-    <h1>👨🏻‍💻 Ayush Kolla</h1>
+<div class="avatar">👨🏻‍💻</div>
 
-    <p class="subtitle">
-        Computer Science Student | Future Software Engineer
-    </p>
+<h1>Ayush Kolla</h1>
 
-    <button onclick="welcome()">Say Hello 👋</button>
+<h2 id="typing"></h2>
+
+<button onclick="scrollToSection()">Explore ↓</button>
 
 </header>
 
-<section class="card">
+<section id="about" class="card">
 
-    <h2>👨🏻‍💻 About Me</h2>
+<h2>About Me</h2>
 
-    <p>
-        Hello! I'm Ayush, a Computer Science Engineering student passionate about
-        programming, Artificial Intelligence, Web Development, and DevOps.
-        I enjoy building creative projects that solve real-world problems.
-    </p>
+<p>
 
-</section>
+I'm a Computer Science Engineering student passionate about AI, Full Stack Development,
+DevOps and building impactful software.
 
-<section class="card">
-
-    <h2>💻 Skills</h2>
-
-    <div class="skills">
-
-        <span>👨🏻‍💻 HTML</span>
-        <span>👨🏻‍💻 CSS</span>
-        <span>👨🏻‍💻 JavaScript</span>
-        <span>👨🏻‍💻 Python</span>
-        <span>👨🏻‍💻 Java</span>
-        <span>👨🏻‍💻 SQL</span>
-        <span>👨🏻‍💻 Git</span>
-        <span>👨🏻‍💻 GitHub</span>
-
-    </div>
+</p>
 
 </section>
 
-<section class="card">
+<section id="skills" class="card">
 
-    <h2>🚀 My Interests</h2>
+<h2>Skills</h2>
 
-    <ul>
+<div class="skill">
+HTML
+<div class="bar"><div class="fill html"></div></div>
+</div>
 
-        <li>👨🏻‍💻 Artificial Intelligence</li>
-        <li>👨🏻‍💻 Full Stack Development</li>
-        <li>👨🏻‍💻 DevOps</li>
-        <li>👨🏻‍💻 Startup Ideas</li>
-        <li>👨🏻‍💻 Open Source</li>
+<div class="skill">
+CSS
+<div class="bar"><div class="fill css"></div></div>
+</div>
 
-    </ul>
+<div class="skill">
+JavaScript
+<div class="bar"><div class="fill js"></div></div>
+</div>
 
-</section>
-
-<section class="card">
-
-    <h2>📈 Goals</h2>
-
-    <p>
-
-        👨🏻‍💻 Become a Full Stack Developer.<br>
-        👨🏻‍💻 Master DevOps and Cloud.<br>
-        👨🏻‍💻 Build impactful AI products.<br>
-        👨🏻‍💻 Contribute to Open Source.<br>
-        👨🏻‍💻 Launch my own startup.
-
-    </p>
+<div class="skill">
+Python
+<div class="bar"><div class="fill py"></div></div>
+</div>
 
 </section>
 
-<section class="card">
+<section class="stats">
 
-    <h2>📬 Contact</h2>
+<div>
+<h1 id="projectsCount">0</h1>
+<p>Projects</p>
+</div>
 
-    <p>
+<div>
+<h1 id="skillsCount">0</h1>
+<p>Skills</p>
+</div>
 
-        👨🏻‍💻 GitHub:
-        <a href="https://github.com/ayushkolla789-maker" target="_blank">
-            ayushkolla789-maker
-        </a>
-
-    </p>
+<div>
+<h1 id="coffeeCount">0</h1>
+<p>Cups of Coffee ☕</p>
+</div>
 
 </section>
 
-<footer>
+<section id="projects" class="card">
 
-    <p>
-        Made with ❤️ by 👨🏻‍💻 Ayush Kolla
-    </p>
+<h2>Projects</h2>
 
-</footer>
+<div class="cards">
+
+<div class="project">
+<h3>🌦 Weather App</h3>
+<p>Weather forecast using API.</p>
+</div>
+
+<div class="project">
+<h3>🤖 AI Chat UI</h3>
+<p>Modern chatbot interface.</p>
+</div>
+
+<div class="project">
+<h3>💰 Expense Tracker</h3>
+<p>Track income & expenses.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="card">
+
+<h2>Contact Me</h2>
+
+<input placeholder="Your Name">
+
+<input placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button onclick="sendMessage()">Send</button>
+
+</section>
+
+<button id="topBtn">⬆</button>
 
 <script src="script.js"></script>
 
